@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Panel, PanelHeader, PanelBody } from './../components/panel/panel.jsx';
-import TableData from '../components/user_tables/TableData'
-class Home extends React.Component {
+import UserProfile from '../components/userProfile/userProfile'
+class User extends React.Component {
+    constructor(props){
+        super(props);
+    }
 	render() {
 		return (
 			<div>
@@ -12,9 +15,9 @@ class Home extends React.Component {
 				</ol> */}
 				{/* <h1 className="page-header">Home <small>header small text goes here...</small></h1> */}
 				<Panel>
-					<PanelHeader>User List</PanelHeader>
+					<PanelHeader>Portal 1</PanelHeader>
 					<PanelBody>
-						<TableData userData={this.props.userData}/>
+						<UserProfile userData = {this.props.userData}/>
 					</PanelBody>
 				</Panel>
 			</div>
@@ -22,4 +25,4 @@ class Home extends React.Component {
 	}
 }
 
-export default Home;
+export default User;
